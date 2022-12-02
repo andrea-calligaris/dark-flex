@@ -1,0 +1,1415 @@
+/*
+ Theme Name:   Dark Flex
+ Theme URI:    https://github.com/andrea-calligaris/
+ Description:  Twenty Fifteen with a top menu and smarter scrolling
+ Author:       Andrea Calligaris
+ Author URI:   https://andreacalligaris.netsons.org/dev/
+ Template:     twentyfifteen
+ Version:      1.0
+ Tags:         dark, top-menu, left-sidebar, smart-scrolling, responsive-layout
+ Text Domain:  twentyfifteen-child
+
+ Tested with Twenty Fifteen 3.2
+
+
+
+*/
+
+
+
+/* -----------------------------------------------------------------------------------
+ *		Color scheme
+ * ----------------------------------------------------------------------------------- */
+
+/* Site background */
+body {
+	background-color: #111111;
+}
+
+/* Site Header background */
+body:before,
+.site-header {
+	background-color: #202020;
+}
+
+/* Box background */
+.post-navigation,
+.pagination,
+.secondary,
+.site-footer,
+.hentry,
+.page-header,
+.page-content,
+.comments-area,
+.widecolumn {
+	background-color: #202020;
+}
+
+/* Box */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.pagination .prev,
+.pagination .next,
+.widget_calendar tbody a,
+.widget_calendar tbody a:hover,
+.widget_calendar tbody a:focus,
+.page-links a,
+.page-links a:hover,
+.page-links a:focus,
+.sticky-post {
+	color: #202020;
+}
+
+/* Main text background */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+.pagination .prev,
+.pagination .next,
+.widget_calendar tbody a,
+.page-links a,
+.sticky-post {
+	background-color: #bebebe;
+}
+
+/* Main text */
+body,
+blockquote cite,
+blockquote small,
+a,
+.dropdown-toggle:after,
+.image-navigation a:hover,
+.image-navigation a:focus,
+.comment-navigation a:hover,
+.comment-navigation a:focus,
+.widget-title,
+.entry-footer a:hover,
+.entry-footer a:focus,
+.comment-metadata a:hover,
+.comment-metadata a:focus,
+.pingback .edit-link a:hover,
+.pingback .edit-link a:focus,
+.comment-list .reply a:hover,
+.comment-list .reply a:focus,
+.site-info a:hover,
+.site-info a:focus {
+	color: #bebebe;
+}
+
+/* Main text border */
+.entry-content a,
+.entry-summary a,
+.page-content a,
+.comment-content a,
+.pingback .comment-body > a,
+.author-description a,
+.taxonomy-description a,
+.textwidget a,
+.entry-footer a:hover,
+.comment-metadata a:hover,
+.pingback .edit-link a:hover,
+.comment-list .reply a:hover,
+.site-info a:hover {
+	border-color: #bebebe;
+}
+
+/* Secondary text background */
+button:hover,
+button:focus,
+input[type="button"]:hover,
+input[type="button"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:focus,
+.pagination .prev:hover,
+.pagination .prev:focus,
+.pagination .next:hover,
+.pagination .next:focus,
+.widget_calendar tbody a:hover,
+.widget_calendar tbody a:focus,
+.page-links a:hover,
+.page-links a:focus {
+	background-color: #bebebe; /* Fallback for IE7 and IE8 */
+	background-color: rgba( 190, 190, 190, 0.7);
+}
+
+/* Secondary text */
+blockquote,
+a:hover,
+a:focus,
+.main-navigation .menu-item-description,
+.post-navigation .meta-nav,
+.post-navigation a:hover .post-title,
+.post-navigation a:focus .post-title,
+.image-navigation,
+.image-navigation a,
+.comment-navigation,
+.comment-navigation a,
+.widget,
+.author-heading,
+.entry-footer,
+.entry-footer a,
+.taxonomy-description,
+.page-links > .page-links-title,
+.entry-caption,
+.comment-author,
+.comment-metadata,
+.comment-metadata a,
+.pingback .edit-link,
+.pingback .edit-link a,
+.post-password-form label,
+.comment-form label,
+.comment-notes,
+.comment-awaiting-moderation,
+.logged-in-as,
+.form-allowed-tags,
+.no-comments,
+.site-info,
+.site-info a,
+.wp-caption-text,
+.gallery-caption,
+.comment-list .reply a,
+.widecolumn label,
+.widecolumn .mu_register label {
+	color: #bebebe; /* Fallback for IE7 and IE8 */
+	color: rgba( 190, 190, 190, 0.7);
+}
+
+/* Secondary text border */
+blockquote,
+.logged-in-as a:hover,
+.comment-author a:hover {
+	border-color: #bebebe; /* Fallback for IE7 and IE8 */
+	border-color: rgba( 190, 190, 190, 0.7);
+}
+
+/* Border background */
+hr,
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background-color: #bebebe; /* Fallback for IE7 and IE8 */
+	background-color: rgba( 190, 190, 190, 0.1);
+}
+
+/* Border color */
+pre,
+abbr[title],
+table,
+th,
+td,
+input,
+textarea,
+.main-navigation ul,
+.main-navigation li,
+.post-navigation,
+.post-navigation div + div,
+.pagination,
+.comment-navigation,
+.widget li,
+.widget_categories .children,
+.widget_nav_menu .sub-menu,
+.widget_pages .children,
+.site-header,
+.site-footer,
+.hentry + .hentry,
+.author-info,
+.entry-content .page-links a,
+.page-links > span,
+.page-header,
+.comments-area,
+.comment-list + .comment-respond,
+.comment-list article,
+.comment-list .pingback,
+.comment-list .trackback,
+.comment-list .reply a,
+.no-comments {
+	border-color: #bebebe; /* Fallback for IE7 and IE8 */
+	border-color: rgba( 190, 190, 190, 0.1);
+}
+
+/* Border focus */
+a:focus,
+button:focus,
+input:focus {
+	outline-color: #bebebe; /* Fallback for IE7 and IE8 */
+	outline-color: rgba( 190, 190, 190, 0.3);
+}
+
+input:focus,
+textarea:focus {
+	border-color: #bebebe; /* Fallback for IE7 and IE8 */
+	border-color: rgba( 190, 190, 190, 0.3);
+}
+
+
+
+/* -----------------------------------------------------------------------------------
+ *		Fix inconsistencies from parent theme / "rename" classes
+ * ----------------------------------------------------------------------------------- */
+
+/**
+ * Redefine "toggle-on" to "toggled-on"
+ */
+
+.dropdown-toggle.toggled-on:after {
+	content: "\f432";
+}
+
+
+/**
+ * Redefine .secondary-toggle to .button-top-menu-toggle
+ */
+
+.button-top-menu-toggle:before { /* see Genericons section */ }
+
+.button-top-menu-toggle {
+	background-color: transparent;
+	border: 1px solid #bebebe;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	text-align: center;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	/* default size */
+	width: 42px;
+	height: 42px;
+}
+
+.button-top-menu-toggle:before {
+	color: #bebebe;
+	content: "\f419";
+	/* default size */
+	line-height: 40px;
+	width: 40px;
+}
+
+.button-top-menu-toggle:hover {
+	border-color: #cacaca;
+	outline: 2px solid #cacaca;
+	/* override buttons' default */
+	background-color: transparent;
+}
+
+.button-top-menu-toggle:hover:before {
+	color: #ffffff;
+}
+
+.button-top-menu-toggle:focus {
+	/* override buttons' default */
+	background-color: transparent;
+}
+
+.button-top-menu-toggle.toggled-on:before {
+	content: "\f405";
+	font-size: 32px;
+	position: relative;
+	top: 1px;
+	left: -1px;
+}
+
+
+
+/* -----------------------------------------------------------------------------------
+ *		Elements using Genericons: initialize them all at once
+ * ----------------------------------------------------------------------------------- */
+
+.button-top-menu-toggle:before,
+.menu-item-has-children a:after,
+.search-button:after,
+.inline-tags:before {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	font-family: "Genericons";
+	font-size: 16px;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	line-height: 1;
+	speak: never;
+	text-align: center;
+	text-decoration: inherit;
+	text-transform: none;
+	vertical-align: top;
+}
+
+
+
+/* -----------------------------------------------------------------------------------
+ *		Defaults
+ * ----------------------------------------------------------------------------------- */
+
+/**
+ * Header
+ */
+
+.site-title a,
+.site-description {
+	color: #bebebe;
+}
+
+.site-title a {
+	outline-color: #bebebe; /* Fallback for IE7 and IE8 */
+	outline-color: rgba( 190, 190, 190, 0.3);
+}
+
+.site-title a:hover,
+.site-title a:focus {
+	color: rgba( 190, 190, 190, 0.7);
+}
+
+/* Site description - hide */
+.site-description {
+	display: none;
+}
+
+/* Custom logo */
+
+.custom-logo {
+	margin-right: 20px;
+	max-height: 64px; /* override parent theme */
+	height: 64px;
+}
+
+.wp-custom-logo .site-title {
+	margin-top: 0;
+	display: inline-block;
+}
+
+
+/**
+ * Misc
+ */
+
+/* Entry Footer (meta-info) - color */
+.entry-footer {
+	background-color: #1b1b1b;
+}
+
+/* Entry Header (meta-info) */
+.top-meta-info.entry-footer {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+
+/* Author Info - remove */
+/* ( the HTML part is removed in PHP in "functions.php" ) */
+.byline {
+	display: none;
+}
+
+/* Sidebar - remove sidebar background before body */
+body:before {
+	content:none;
+}
+/* and make it a normal background instead */
+.secondary {
+	background-color: #202020;
+}
+
+/* I'll use the "expand" symbol from Genericons in menu items on desktop too
+ * (and not on the dropdown class), so: */
+.menu-item-has-children a:after { /* see Genericons section */ }
+
+/* Post - spacing */
+article.type-post {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+/* Post - Title */
+.type-post .entry-title {
+	margin-top: 0.5em;
+}
+
+/* Page - style */
+
+article.type-page {
+	padding-top: 2.0em;
+}
+
+article.type-page .entry-content {
+	padding-bottom: 3.0em;
+}
+
+article.type-page h1,
+article.type-page h2,
+article.type-page h3,
+article.type-page h4,
+article.type-page h5,
+article.type-page h6 {
+	text-align: center;
+}
+
+/* Post format "Quote" */
+
+.format-quote .entry-content {
+	padding: 1% 0.9em;
+}
+
+.format-quote .entry-footer {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+/* Post format "Video" */
+.format-video:not(.excerpt) .entry-title {
+	padding-top: 1.0em;
+}
+
+/* Text highlighting */
+
+/* Color changes in the blocks editor result in inline HTML; this should change in future WordPress versions. For now, you can add the "highlight" class to the "mark" tags, so this stylesheet can override the colors with "!important" */
+
+.highlight {
+  color: black;
+	background-color: #e6da75 !important;
+}
+
+.highlight a {
+	color: blue;
+	border-bottom: 4px solid !important;
+}
+
+.highlight a:hover {
+	color: #000088 !important;
+	border-bottom: 4px solid !important;
+}
+
+.highlight a:active {
+	color: #483d8b !important;
+	border-bottom: 4px solid !important;
+}
+
+.highlight a:focus {
+	color: blue;
+	outline-color: blue;
+}
+
+.warning {
+	color: #f4ca16 !important;
+	background-color: transparent !important;
+}
+
+.warning a {
+	color: #e53b51 !important;
+}
+
+.warning a:hover {
+	color: orange !important;
+}
+
+.warning a:active {
+	color: red !important;
+}
+
+.note {
+	color: white !important;
+}
+
+.small-note {
+	color: white !important;
+	font-size: 75% !important;
+}
+
+/* Link colors */
+
+a:hover,
+a:focus {
+	color: rgba(255, 255, 255, 0.32);
+}
+
+.main-navigation .current-menu-item > a,
+.main-navigation .current-menu-ancestor > a {
+	color: rgba(255, 255, 255, 0.92);
+}
+
+.external-link {
+	--extlink: 168, 120, 63;
+}
+
+.external-link a, a.external-link {
+	color: rgb(var(--extlink));
+}
+
+.external-link a:hover, a.external-link:hover {
+	color: rgba(var(--extlink), 0.55);
+}
+
+.external-link a:active, a.external-link:active {
+	color: orange;
+}
+
+.external-link a:focus, a.external-link:focus {
+	color: rgb(var(--extlink));
+	outline-color: orange;
+}
+
+/* Search form */
+
+.search-area {
+	padding-top: 6%;
+	padding-bottom: 6%;
+}
+
+.search-form {
+	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.search-button {
+	font-size: 16px;
+	margin: 0;
+	padding: 0 3%;
+}
+
+.search-button:after {
+	/* see Genericons section */
+	content: "\f400";
+}
+
+/* Audio Player */
+
+.mejs-controls,
+.mejs-mediaelement,
+.mejs-container {
+	background-color: black !important;
+}
+
+.mejs-currenttime,
+.mejs-duration {
+	color: #bebebe !important;
+}
+
+.mejs-horizontal-volume-current {
+	background: #bebebe !important;
+}
+
+/* Sidebar Menu */
+
+.sidebar-navigation {
+	text-align: justify;
+	padding: 2% 5%;
+}
+
+.sidebar-navigation li {
+	list-style: none;
+}
+
+.menu-sidebar-menu-container ul {
+	border-top: 1px solid #161616;
+	padding-top: 10px;
+	margin-bottom: 10px;
+}
+
+/* Widgets */
+
+.widget {
+	font-size: 15px;
+	font-size: 1.5rem;
+	margin: 5%;
+}
+
+.widget-title {
+	letter-spacing: normal;
+	text-transform: none;
+	margin: 0;
+	margin-bottom: 2px;
+}
+
+/* Excerpts */
+
+.excerpt {
+	padding-top: 2%;
+}
+
+.hentry + .hentry.excerpt {
+	margin-top: 14px;
+}
+
+.excerpt .entry-footer,
+.excerpt .entry-content,
+.entry-summary {
+	padding-top: 1%;
+	padding-bottom: 1%;
+}
+
+.excerpt .entry-title {
+	padding-top: 1%;
+	margin-bottom: 1%;
+	font-size: 22px;
+}
+
+.excerpt p {
+	margin-bottom: 2px;
+}
+
+/* Excerpt of a quote - show the entire quote, in a different style */
+
+.excerpt.format-quote + .excerpt.format-quote {
+	margin-top: 0;
+	border-top: solid 2px black;
+}
+
+.excerpt.format-quote p + p {
+	margin-top: 0.9em;
+	margin-bottom: 0;
+}
+
+.excerpt.format-quote .wp-block-quote {
+	margin-bottom: 0.2em;
+}
+
+.excerpt.format-quote .entry-summary {
+	padding-left: 0.9em;
+	padding-right: 0.9em;
+}
+
+/* Asides */
+.format-aside .entry-format:before {
+	content: "\f455";
+}
+
+/* Pages navigation */
+.nav-links {
+	justify-content: center;
+}
+
+
+/**
+ * Quote Blocks
+ */
+
+.wp-block-quote p {
+	font-size: 78%;
+}
+
+.wp-block-quote:not(.is-style-plain) p {
+	font-style: normal;
+}
+
+/* Very Plain */
+.wp-block-quote.is-style-very-plain p {
+	font-style: normal;
+	color: #bebebe;
+}
+
+.wp-block-quote.is-style-very-plain {
+	border:none;
+}
+
+/* Internet Quotes */
+.internet-quote {
+	color: #bebebe;
+}
+
+/* Source of a quote */
+.quote-source {
+	color: white;
+	font-style: italic;
+}
+
+/* Source of a quote with link */
+.quote-source a {
+	color: white;
+	font-style: italic;
+}
+
+/* Source of an Internet quote */
+.internet-source,
+.wp-block-quote.internet-quote .quote-source,
+.internet-quote .quote-source,
+.internet-quote + .quote-source,
+.quote-source.internet-quote {
+	color: #fcffa4;
+	font-style: normal;
+}
+
+/* Source of an Internet quote with link */
+.internet-source a,
+.wp-block-quote.internet-quote .quote-source a,
+.internet-quote .quote-source a,
+.internet-quote + .quote-source a,
+.quote-source.internet-quote a {
+	color: #fcffa4;
+	font-style: normal;
+}
+
+/* Indent (e.g. for replies to quoted posts from the internet) */
+.indent {
+	padding-left: 10%;
+}
+
+
+/**
+ * Other Blocks
+ */
+
+/* Poetry */
+.wp-block-verse {
+	border: none;
+}
+
+/* Query Loops */
+
+.wp-block-query .wp-block-post {
+	margin: 0px;
+	padding: 0px;
+}
+
+.wp-block-query .hentry h1,
+.wp-block-query .hentry h2,
+.wp-block-query .hentry h3,
+.wp-block-query .hentry h4,
+.wp-block-query .hentry h5,
+.wp-block-query .hentry h6 {
+	margin: 0px;
+	padding: 0px;
+}
+
+
+/**
+ * "Back to Top" Button
+ */
+
+.back-to-top {
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	width: 45px;
+	height: 45px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 9999;
+	background-color: #303030;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+	transition: background-color .3s, opacity .5s, visibility .5s;
+	-webkit-transition: background-color .3s, opacity .5s, visibility .5s;
+	-moz-transition: background-color .3s, opacity .5s, visibility .5s;
+	-ms-transition: background-color .3s, opacity .5s, visibility .5s;
+	-o-transition: background-color .3s, opacity .5s, visibility .5s;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.back-to-top::after {
+	content: "";
+	border: solid #fff;
+	border-width: 0 3px 3px 0;
+	display: inline-block;
+	padding: 3px;
+	transform: rotate(-135deg);
+	-webkit-transform: rotate(-135deg);
+	-moz-transform: rotate(-135deg);
+	-ms-transform: rotate(-135deg);
+	-o-transform: rotate(-135deg);
+}
+
+.back-to-top:hover {
+	background-color: #808080;
+}
+
+.back-to-top:active {
+	background-color: #e0e0e0;
+}
+
+.back-to-top--show {
+	opacity: 1;
+	visibility: visible;
+}
+
+.back-to-top--fade-out {
+	opacity: .5;
+}
+
+
+/**
+ * Post Navigation ("Previous" / "Next" at the bottom of a post)
+ */
+
+.post-navigation {
+	border: none;
+}
+
+.post-navigation .nav-next,
+.post-navigation .nav-previous {
+	width: auto;
+	display: block;
+}
+
+.post-navigation div + div {
+	border: none;
+}
+
+.post-navigation .post-title {
+	font-size: 96%;
+}
+
+.post-navigation .nav-previous {
+	font-size: 80%;
+}
+
+.nav-previous .meta-nav {
+	text-transform: none;
+}
+
+
+
+/* -----------------------------------------------------------------------------------
+ *		Plugins
+ * ----------------------------------------------------------------------------------- */
+
+/**
+ * Sticky Sidebar v2 JavaScript Plugin's CSS requirements
+ */
+
+.sidebar {
+	will-change: min-height;
+}
+
+.sidebar__inner {
+	transform: translate(0, 0);
+	transform: translate3d(0, 0, 0);
+	will-change: position, transform;
+}
+
+.clearfix:after{
+	display: block;
+	content: "";
+	clear: both;
+}
+
+@media screen and (min-width: 800px) {
+	[dir="rtl"] .is-affixed>.sidebar__inner {
+		/*rtl:ignore*/
+		left: auto !important;
+	}
+}
+
+
+
+/* -----------------------------------------------------------------------------------
+ *		Only on MOBILE
+ * ----------------------------------------------------------------------------------- */
+
+/* Header */
+.header-spacer {
+	display: none;
+}
+
+/* Toggleable Top Menu */
+
+.main-navigation {
+	display: none;
+}
+
+.main-navigation.toggled-on {
+	display: block;
+}
+
+/* Sidebar - Move it to bottom */
+
+#main-container {
+	display: flex;
+	flex-direction:column;
+}
+
+.sidebar, .secondary {
+	display: block;
+	float: none;
+	order: 2;
+}
+
+.site-content {
+	order: 1;
+}
+
+/* Sub-menus spacing */
+.main-navigation ul ul {
+	display: none; /* start hidden */
+	margin-left: 2.0em;
+}
+
+/* Toggle parent of current page */
+.main-navigation ul .current-menu-item ul {
+	display: block;
+}
+
+
+/**
+ * Dropdown Menus
+ */
+
+.dropdown-toggle {
+	background-color: transparent;
+	border: 0;
+	border-radius: 0;
+	color: #1a1a1a;
+	content: "";
+	height: 48px;
+	padding: 0;
+	position: absolute;
+	right: 0;
+	text-transform: none;
+	top: 0;
+	width: 48px;
+}
+
+.dropdown-toggle:after {
+	font-size: 24px;
+	position: relative;
+	width: 48px;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle:focus {
+	background-color: transparent;
+	color: #007acc;
+}
+
+.dropdown-toggle:focus {
+	outline: thin dotted;
+	outline-offset: -1px;
+}
+
+.dropdown-toggle:focus:after {
+	border-color: transparent;
+}
+
+/* Rotate the expand-collapse icon, to get this: ">"; if you like it, uncomment this code */
+/*
+.dropdown-toggle.toggled-on:after {
+	content: "\f431";
+	right: 0.5625em;
+	-webkit-transform: rotate(-90deg);
+	-moz-transform: rotate(-90deg);
+	-ms-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+*/
+
+
+/* No need for the "Back to Top" Button in mobile */
+.back-to-top {
+	display: none;
+}
+
+/* Excerpt of a quote - show the entire quote, in a different style */
+
+.excerpt.format-quote {
+	margin-left: 1.6em;
+	margin-right: 1.6em;
+}
+
+/* Post Navigation ("Previous" / "Next" at the bottom of a post) on mobile */
+
+.nav-links {
+	display: flex;
+	flex-direction: column;
+}
+
+.post-navigation .nav-previous	{ order: 1; }
+
+.post-navigation .nav-next		{ order: 0; }
+
+
+
+/* -----------------------------------------------------------------------------------
+ *		Only on DESKTOP
+ * ----------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 59.6875em) {
+
+
+
+/* Clean mobile stuff */
+.dropdown-toggle,
+.main-navigation ul .dropdown-toggle.toggled-on,
+.button-top-menu-toggle {
+	display: none;
+}
+
+/* Main Container - display behavior */
+#main-container {
+	display: block;
+}
+
+/* Site Header - make it sticky */
+
+.header-spacer {
+	display: block;
+}
+
+.site-header {
+	background-color: black;
+	border: none;
+	margin: 0 !important;
+	padding: 1.0%;
+	display: flex;
+	position: fixed;
+	top: 0;
+	max-width: 1403px;
+	width: 100%;
+	box-shadow: -999px 0 black, 999px 0 black;
+	z-index: 100 !important;
+}
+
+.logged-in .site-header {
+	top: 32px; /* make space for the wp admin-bar */
+}
+
+/* adjust for Internal Links (Anchors) */
+html{
+	scroll-padding-top: 100px;
+}
+
+/* Sidebar - fill background vertically */
+.sidebar__inner {
+	box-shadow: 0 -999px #202020, 0 999px #202020;
+}
+
+/* Sidebar - spacing */
+.sidebar {
+	display: block; /* visible */
+	float: left;
+	padding-top: 0;
+	margin-top:0;
+}
+
+/* Excerpt of a quote - show the entire quote, in a different style */
+
+.excerpt.format-quote {
+	margin-left: 8.0em;
+	margin-right: 8.0em;
+}
+
+
+/* -----------------------------------------------------------------------------------
+ * Top Menu Navigation (only on desktop)
+ */
+
+/* Sticky Top Menu */
+.main-navigation {
+	display: block;
+}
+
+/* Top Menu - spacing */
+.main-navigation {
+	margin: auto;
+	text-align: center;
+}
+
+/* Menu borders (top and bottom) */
+.main-navigation ul {
+	border-width: 3px;
+}
+
+/* Menu inline */
+.main-navigation ul li {
+	border: none;
+	margin: 0px 10px 0px 0px;
+	text-align: center;
+	display: inline-block;
+}
+
+/* Icon for parent menus */
+/* (same icon for mobile, but placed after the parent link) */
+.main-navigation .menu-item-has-children > a:after {
+	content: "\f431";
+	position: absolute;
+	right: 0.625em;
+	margin-top: 1px;
+}
+
+
+/**
+ * Popup Sub-Menus
+ */
+
+.main-navigation ul ul {
+	/* visible, but outside of screen */
+	display: block;
+	left: -999em;
+	/**/
+	margin: 0;
+	position: absolute;
+	z-index: 99999;
+}
+
+.main-navigation li:hover > ul,
+.main-navigation li.focus > ul {
+	/* show it: */
+	left: auto;
+	right: 0;
+	/* perfectly align with the expand-collapse icon */
+	margin-right: -1px;
+}
+
+.main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
+	/* show it: */
+	left: auto;
+	right: 100%;
+}
+
+/* Sub-Sub-Menus */
+.main-navigation ul ul ul {
+	top: -1px;
+}
+
+/* Popup - style */
+.main-navigation ul ul li {
+	background-color: #101010;
+	border: 1px solid #bebebe;
+}
+
+/* Popup - link padding */
+.main-navigation ul ul a {
+	width: 12.6875em;
+	outline-offset: -8px;
+	padding: 0.65625em 0.875em;
+	white-space: nowrap;
+}
+
+/* Popup - Tail Sub-Sub */
+.main-navigation ul ul ul:before,
+.main-navigation ul ul ul:after {
+	border: 0;
+}
+
+/* Popup - Tail - spacing */
+.main-navigation ul ul:before, .main-navigation ul ul:after {
+	border-style: solid;
+	content: "";
+	position: absolute;
+}
+
+/* Popup - Tail - style */
+.main-navigation ul ul:after {
+	border-color: #101010 transparent;
+	border-width: 0 8px 8px;
+	right: 11px;
+	top: -7px;
+}
+
+/* Popup - Tail - border */
+.main-navigation ul ul:before {
+	border-color: #d1d1d1 transparent;
+	border-width: 0 10px 10px;
+	right: 9px;
+	top: -9px;
+}
+
+/* end of Top Menu Navigation (only on desktop)
+ * ----------------------------------------------------------------------------------- */
+
+
+/* "Back to Top" Button */
+.back-to-top {
+	display: flex;
+}
+
+/* Post Navigation ("Previous" / "Next" at the bottom of a post) on desktop */
+
+.nav-links {
+	flex-direction: row;
+}
+
+.post-navigation .nav-previous { order: 0; }
+
+.post-navigation .nav-next {
+	order: 1;
+	flex-grow: 2;
+}
+
+.post-navigation a { padding: 0; }
+
+.nav-next { margin-left: 4%; }
+
+.nav-next a { text-align: right; }
+
+.post-navigation .nav-links { padding: 2% 2%; }
+
+
+
+}
+/* --- end of only on desktop */
+
+
+
+/* -----------------------------------------------------------------------------------
+ *		Screen sizes
+ * ----------------------------------------------------------------------------------- */
+
+@media screen and (min-width: 46.25em) {
+
+	/* Header */
+	.custom-logo {
+		max-height: 73px;
+		height: 73px;
+	}
+
+
+	.widget {
+		font-size: 17px;
+		font-size: 1.7rem;
+		line-height: 1.6471;
+	}
+
+	.button-top-menu-toggle { height: 56px; width: 56px; }
+	.button-top-menu-toggle:before { line-height: 54px; width: 54px; }
+
+}
+
+
+
+@media screen and (min-width: 55em) {
+	
+	/* Header */
+	.custom-logo {
+		max-height: 86px;
+		height: 86px;
+	}
+
+
+	.widget {
+		font-size: 19px;
+		font-size: 1.9rem;
+		line-height: 1.6842;
+	}
+
+	.button-top-menu-toggle { height: 64px; width: 64px; }
+	.button-top-menu-toggle:before { line-height: 62px; width: 62px; }
+
+}
+
+
+
+@media screen and (min-width: 59.6875em) { /* Desktop; see the above section for the main changes */
+
+	/* Header */
+	.header-spacer {
+		height: 56px;
+	}
+	.wp-custom-logo .header-spacer {
+		height: 80px;
+	}
+	.custom-logo {
+		max-height: 64px;
+		height: 64px;
+	}
+
+
+	.widget {
+		font-size: 15px;
+		font-size: 1.5rem;
+		line-height: 1.6
+	}
+
+}
+
+
+
+@media screen and (min-width: 68.75em) {
+
+	/* Header */
+	/* .header-spacer { } */
+	.wp-custom-logo .header-spacer {
+		height: 90px;
+	}
+	.custom-logo {
+		max-height: 73px;
+		height: 73px;
+	}
+
+
+	.main-navigation .menu-item-has-children > a:after { margin-top: 3px; }
+
+	.widget {
+		font-size: 17px;
+		font-size: 1.7rem;
+		line-height: 1.6471;
+	}
+
+}
+
+
+
+@media screen and (min-width: 77.5em) {
+	/* Header */
+	.wp-custom-logo .site-header {
+		padding-top: 6px;
+		padding-bottom: 6px;
+	}
+	.header-spacer {
+		height: 62px;
+	}
+	.wp-custom-logo .header-spacer {
+		height: 100px;
+	}
+	.custom-logo {
+		max-height: 86px;
+		height: 86px;
+	}
+
+
+	.main-navigation .menu-item-has-children > a:after { margin-top: 5px; }
+
+	.widget {
+		font-size: 19px;
+		font-size: 1.9rem;
+		line-height: 1.6842;
+	}
+
+}
+
+
+
+@media screen and (min-width: 87.6875em) {
+
+	.main-navigation .menu-item-has-children > a:after { margin-top: 8px; }
+
+	/* Site Header - change it to fixed padding, otherwise it keeps growing hiding part of the page */
+	.site-header {
+		padding-top: 14px;
+		padding-bottom: 14px;
+		padding-left: inherit;
+		padding-right: inherit;
+	}
+	.wp-custom-logo .site-header {
+		padding-top: 8px;
+		padding-bottom: 8px;
+	}
+
+	/* Header */
+	.header-spacer {
+		height: 68px;
+	}
+	.wp-custom-logo .header-spacer {
+		height: 100px;
+	}
+
+}
+
+
+
+@media print {
+	.button-top-menu-toggle { display: none; }
+}
